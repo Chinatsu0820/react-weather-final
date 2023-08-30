@@ -1,0 +1,39 @@
+{
+  "name": "weather-app-project",
+  "version": "1.0.0",
+  "description": "weather app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinatsu0820/react-weather-final.git"
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "alice-maya-saki-chinatsu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chinatsu0820/react-weather-final/issues"
+  },
+  "homepage": "https://github.com/Chinatsu0820/react-weather-final#readme",
+  "devDependencies": {
+    "@babel/core": "^7.22.11",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "html-webpack-plugin": "^5.5.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
