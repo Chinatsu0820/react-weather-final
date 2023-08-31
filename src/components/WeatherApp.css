@@ -36,3 +36,17 @@
     justify-content: center;
     gap: 20px;
 }
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 上寄せに調整 */
+    margin-top: 20px; /* 必要に応じて適切なマージンを設定 */
+}
+
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+/* MainCardとCardDetailComponentのスタイルはそれぞれのコンポーネントのCSSで設定 */

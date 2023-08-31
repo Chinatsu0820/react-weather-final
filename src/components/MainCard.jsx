@@ -28,7 +28,7 @@ export default function MainCard({ data }) {
     }
 
     return (
-        <div className="card-container bg-gradient-to-b from-blue-800 to-blue-500 p-4 rounded-lg shadow-lg max-w-xs flex flex-col items-center justify-center">
+        <div className="card-container mt-0 pt-0 bg-gradient-to-b from-blue-800 to-blue-500 p-4 rounded-lg shadow-lg max-w-xs flex flex-col items-center justify-center">
             <h4 className="text-white text-xs font-semibold mb-2 text-left">Current Weather</h4>
             <div className="weather-icon">
                 <img src={weatherImage} alt="Weather Icon" className="w-32 h-32" />
@@ -40,7 +40,6 @@ export default function MainCard({ data }) {
                 <span className="text-base font-light">{data.name}</span>
             </div>
         </div>
-
 
 
     );
