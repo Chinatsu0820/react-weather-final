@@ -57,7 +57,7 @@ const WeatherApp = () => {
     
 
     return (
-        <div className="container">
+        <div className="main-container">
 
             <div className="searchBar">
                 <input type="text" className="cityInput search-inside" placeholder="Search" />
