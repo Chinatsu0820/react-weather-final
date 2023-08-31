@@ -69,4 +69,52 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
+
+-------------------------------------------------------------------------------------------------
+
+# This is the final team project in WD4.
+
+The Goal of this project is "To Create a Single-Page Web Application".
+
 Our team member are Saki, Alice, Maya and Chinatsu.
+
+# Requirements:
+1. Use JavaScript ES6. - Hard Requirements.
+2. Javascript Framework (Express, ReactJs). - Hard Requirements.
+3. Use Control Version (Git/Github). - Hard Requirements.
+4. Use Gulp.js as a task manager.- Hard Requirements.
+5. Use Bundlers / Webpack.- Hard Requirements.
+6. Use CSS Libraries (Bootstrap, Tailwind) - Optional.
+7. Use Javascript Libraries (jQuery) - Soft Requirement.
+8. Use AJAX (jQuery) - Soft Requirement.
+9. Use JSON - Soft Requirements.
+10. Use third-party APIS - Soft Requirement.
+11. Use npm (Node Package Manager) to import packages for libraries and
+frameworks.
+12. Express.js framework for the server side. - Optional.
+13. Emulate a local database by having a / data. - Optional.
+14. [individual requirement] Read from and write to a .json file in your /data
+15. [individual requirement] Read from and write to a .csv file in your /data
+16. [individual requirement] Cover CRUD with all four HTTP methods: GET,
+POST, PUT or PATCH, and DELETE - Optional.
+
+# Projects suggestions:
+- Task Manager App: Task manager application where users can add,
+edit, and mark tasks as complete.
+- E-Commerce App: Develop an e-commerce website where users
+can browse products, add them to a cart and proceed to checkout.
+Implement features like filtering and sorting
+- Weather App: Develop a weather app where users can search for
+weather based on their city and location. Show properties such as
+Temperature, Humidity, Wind, Feels like,
+- Social Media Dashboard: Build a dashboard for managing social
+media profiles. Allow users to schedule posts.
+- Fitness Tracking App: Design an app for tracking fitness activities.
+Users can work out, set fitness goals, and view progress over time.
+- Budget Tracker: Develop an application that helps users manage
+their own personal finances. Allow users to see budgets and track
+expenses.
+- Travel Planner App: Develop an app for planning trips. Users can
+put their destination, travel dates, and preferences and they also can
+share their experience after the trip. The app can provide
+suggestions for attractions, accommodations and itineraries.
