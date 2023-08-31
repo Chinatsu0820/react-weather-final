@@ -1,10 +1,10 @@
 import React from "react";
 import "./MainCard.css";
-import clear_icon from "../imgs/clear.jpg";
-import cloud_icon from "../imgs/cloud.jpg";
-import drizzle_icon from "../imgs/drizzle.jpg";
-import rain_icon from "../imgs/rain.jpg";
-import snow_icon from "../imgs/snow.jpg";
+import clear_icon from "../imgs/clear.png";
+import cloud_icon from "../imgs/cloud.png";
+import drizzle_icon from "../imgs/drizzle.png";
+import rain_icon from "../imgs/rain.png";
+import snow_icon from "../imgs/snow.png";
 
 export default function MainCard({ data }) {
     const weatherIconCode = data.weather[0].icon;
