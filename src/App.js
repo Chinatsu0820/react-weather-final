@@ -1,11 +1,12 @@
 import React from "react";
 import "./index.css";
+import Search from "./components/Search.jsx";
 
 function App() {
   return (
-    <div className="App bg-yellow-100">
-      <h1 className="text-3xl font-bold underline">Hello World..!</h1>
-      <div><p className="underline underline-offset-1">lorem ffffipsum</p></div>
+    <div className="App">
+      <h1>Weather.app</h1>
+      <div className="pt-50"><Search /></div>
     </div>
   );
 }
