@@ -28,7 +28,7 @@ export default function MainCard({ data }) {
     }
 
     return (
-        <div className="card-container mt-0 pt-0 h-110 bg-gradient-to-b from-blue-800 to-blue-500 p-4 rounded-lg shadow-lg max-w-xs flex flex-col items-center justify-center">
+        <div className="card-container bg-gradient-to-b from-blue-800 to-blue-500 p-8 rounded-lg shadow-lg max-w-xs flex flex-col items-center justify-center">
             <h4 className="text-white text-2xl font-semibold mb-2 text-left">Current Weather</h4>
             <div className="weather-icon">
                 <img src={weatherImage} alt="Weather Icon" className="w-48 h-48" />
@@ -36,7 +36,7 @@ export default function MainCard({ data }) {
             <div className="temperature mt-4 text-white text-6xl font-semibold">
                 {Math.floor(data.main.temp)}°C
             </div>
-            <div className="location mt-2 text-gray-300">
+            <div className="font-normal text-center justify-center text-white capitalize">
                 <span className="text-xl font-light">{data.name}</span>
             </div>
         </div>

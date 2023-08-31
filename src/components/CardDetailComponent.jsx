@@ -11,7 +11,7 @@ export default function CardDetailComponent({ data }) {
     const weatherIcon = data.weather[0].icon;
 
     return (
-        <div className="card-grid">
+        <div className="card-detail-container">
             <div className="card bg-gradient-to-r from-cyan-500 to-blue-500">
             <h5 className="mb-2 text-m font-light tracking-tight text-white">Humidity</h5>
                 <div className="flex items-center justify-center">
@@ -47,5 +47,6 @@ export default function CardDetailComponent({ data }) {
                 <p className="font-normal text-center justify-center text-white capitalize">{data.weather[0].description}</p>
             </div>
         </div>
+
     );
 }
