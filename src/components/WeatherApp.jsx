@@ -69,6 +69,10 @@ const WeatherApp = () => {
                     <img className="search-icon" src={search_icon} alt="Search" />
                 </button>
             </div>
+            
+            {/* <div className="weather-image">
+                <img src={wicon} alt="" />
+            </div> */}
 
             {/* <div className="top-bar">
                 <SearchBar onSearch={search} />
