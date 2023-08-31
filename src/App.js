@@ -6,7 +6,6 @@ import WeatherApp from './components/WeatherApp.jsx';
 function App() {
   return (
     <div className="App">    
-      <h1>Weather.app</h1>
       {/* <Search /> */}
       <WeatherApp/>
     </div>
