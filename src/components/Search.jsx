@@ -25,7 +25,7 @@ export default function Search() {
       });
   };
 
-  console.log(`api`, apiData) // just for confirmation
+  console.log(`api`, apiData)
 
   return (
     <div>
