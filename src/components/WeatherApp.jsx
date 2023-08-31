@@ -6,8 +6,6 @@ import MainCard from "./MainCard.jsx";
 
 // import SearchBar from "../SearchBar.jsx"
 
-import './Search.css';
-
 import search_icon from "../imgs/search.png";
 import clear_icon from "../imgs/clear.jpg";
 import cloud_icon from "../imgs/cloud.jpg";
