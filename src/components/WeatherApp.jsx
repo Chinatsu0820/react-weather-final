@@ -7,11 +7,11 @@ import MainCard from "./MainCard.jsx";
 // import SearchBar from "../SearchBar.jsx"
 
 import search_icon from "../imgs/search.png";
-import clear_icon from "../imgs/clear.jpg";
-import cloud_icon from "../imgs/cloud.jpg";
-import drizzle_icon from "../imgs/drizzle.jpg";
-import rain_icon from "../imgs/rain.jpg";
-import snow_icon from "../imgs/snow.jpg";
+import clear_icon from "../imgs/clear.png";
+import cloud_icon from "../imgs/cloud.png";
+import drizzle_icon from "../imgs/drizzle.png";
+import rain_icon from "../imgs/rain.png";
+import snow_icon from "../imgs/snow.png";
 
 // import wind_icon from "../imgs/wind.jpg";
 // import humidity_icon from "../imgs/humidity.jpg";
