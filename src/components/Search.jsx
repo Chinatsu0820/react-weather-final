@@ -38,9 +38,9 @@ export default function Search() {
           placeholder="Type city name"
           onChange={(e) => setPlace(e.target.value)}
           value={place} />
-        <button className="search-button" type='submit'>
+        <button className="search-button " type='submit'>
           button
-          {/*<img src={require("./../imgs/search_icon.png")} alt="" />*/}
+          {/* <img src={require("./../imgs/search_icon.png")} alt="" /> */}
         </button>
       </form>
     </div>

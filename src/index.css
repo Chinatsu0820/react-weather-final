@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(226, 18, 18);
+    background-color:mediumaquamarine;
 }
 
 .App {
-    color: #fff;
+    color: black;
 }
