@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./WeatherApp.css";
-import CardComponent from "./CardComponent.jsx";
+// import CardComponent from "./CardComponent.jsx";
 import CardDetailComponent from "./CardDetailComponent.jsx";
 import MainCard from "./MainCard.jsx";
-
-// import SearchBar from "../SearchBar.jsx"
 
 import search_icon from "../imgs/search.png";
 import clear_icon from "../imgs/clear.png";
@@ -60,7 +58,7 @@ const WeatherApp = () => {
 
     return (
         <div className="container">
-            
+
             <div className="searchBar">
                 <input type="text" className="cityInput search-inside" placeholder="Search" />
                 <button className="search-button" onClick={search}>
@@ -68,35 +66,15 @@ const WeatherApp = () => {
                 </button>
             </div>
             
-            {/* <div className="weather-image">
-                <img src={wicon} alt="" />
-            </div> */}
-
-            {/* <div className="top-bar">
-                <SearchBar onSearch={search} />
-                <input type="text" className="cityInput search-inside" placeholder="Search" />
-                
-                <div className="weather-image">
-                    <img src={wicon} alt="" />
-                </div>
-                
-                <div>
-                    <CardComponent className="DataContainer">
-                        {data && <MainCard data={data} className="maincard"/>}
-                        {data && <CardDetailComponent data={data} classname="secondcard"/>}
-                    </CardComponent>
-                </div>
-            </div> */}
-            <div className="top-bar">
-                <div className="card-container">
-                    {data && (
-                        <>
-                            <MainCard data={data} className="main-card" />
-                            <CardDetailComponent data={data} className="second-card" />
-                        </>
-                    )}
-                </div>
+            <div className="card-container">
+                {data && (
+                    <>
+                        <MainCard data={data} className="main-card" />
+                        <CardDetailComponent data={data} className="second-card" />
+                    </>
+                )}
             </div>
+            
             
         </div>
     );

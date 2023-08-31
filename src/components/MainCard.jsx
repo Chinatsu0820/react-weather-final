@@ -1,5 +1,5 @@
 import React from "react";
-import "./MainCard.css";
+import "./MainCard.css"; 
 import clear_icon from "../imgs/clear.png";
 import cloud_icon from "../imgs/cloud.png";
 import drizzle_icon from "../imgs/drizzle.png";
@@ -8,7 +8,6 @@ import snow_icon from "../imgs/snow.png";
 
 export default function MainCard({ data }) {
     const weatherIconCode = data.weather[0].icon;
-    const iconUrl = `http://openweathermap.org/img/w/${weatherIconCode}.png`;
 
     let weatherImage;
 
@@ -29,23 +28,20 @@ export default function MainCard({ data }) {
     }
 
     return (
-        <div className="card-container">
-            <h3>Current Weather</h3>
-            <div>
-                <img src={weatherImage} alt="Weather Icon" />
+        <div className="card-container bg-gradient-to-b from-blue-800 to-blue-500 p-4 rounded-lg shadow-lg max-w-xs flex flex-col items-center justify-center">
+            <h4 className="text-white text-xs font-semibold mb-2 text-left">Current Weather</h4>
+            <div className="weather-icon">
+                <img src={weatherImage} alt="Weather Icon" className="w-32 h-32" />
             </div>
-            <h5 className="mb-2 text-xs font-bold tracking-tight text-white">Temperature</h5>
-            <div>
-                <span className="text-2xl text-white feels-like">{Math.floor(data.main.temp)}°C</span>
+            <div className="temperature mt-4 text-white text-6xl font-semibold">
+                {Math.floor(data.main.temp)}°C
             </div>
-            <h5 className="mb-2 text-xs font-bold tracking-tight text-white">Location</h5>
-            <div>
-                <span className="text-2xl text-white feels-like">{data.name}</span>
+            <div className="location mt-2 text-gray-300">
+                <span className="text-base font-light">{data.name}</span>
             </div>
         </div>
+
+
+
     );
 }
-
-
-
-
