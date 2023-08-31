@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-color:mediumaquamarine;
+    background-color:rgb(7, 118, 81);
 }
 
 .App {
