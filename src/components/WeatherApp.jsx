@@ -10,13 +10,15 @@ import cloud_icon from "../imgs/cloud.png";
 import drizzle_icon from "../imgs/drizzle.png";
 import rain_icon from "../imgs/rain.png";
 import snow_icon from "../imgs/snow.png";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 // import wind_icon from "../imgs/wind.jpg";
 // import humidity_icon from "../imgs/humidity.jpg";
 
-
-
+       
 const WeatherApp = () => {
+
     let api_key = "7a73f546e23472cce6023cba32b7b261";
 
     const [data, setData] = useState(null);
@@ -54,31 +56,35 @@ const WeatherApp = () => {
         }
     };
 
-    
+
 
     return (
-        <div className="container">
+        <div>
+            <Header /> 
+            <div className="container">
 
-            <div className="searchBar">
-                <input type="text" className="cityInput search-inside" placeholder="Search" />
-                <button className="search-button" onClick={search}>
-                    <img className="search-icon" src={search_icon} alt="Search" />
-                </button>
+                <div className="searchBar">
+                    <input type="text" className="cityInput search-inside" placeholder="Search" />
+                    <button className="search-button" onClick={search}>
+                        <img className="search-icon" src={search_icon} alt="Search" />
+                    </button>
+                </div>
+
+                <div className="card-container">
+                    {data && (
+                        <>
+                            <MainCard data={data} className="main-card" />
+                            <CardDetailComponent data={data} className="second-card" />
+                        </>
+                    )}
+                </div>
+
             </div>
-            
-            <div className="card-container">
-                {data && (
-                    <>
-                        <MainCard data={data} className="main-card" />
-                        <CardDetailComponent data={data} className="second-card" />
-                    </>
-                )}
-            </div>
-            
-            
+            <Footer />
         </div>
     );
 };
+
 
 export default WeatherApp;
 
