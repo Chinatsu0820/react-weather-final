@@ -59,33 +59,36 @@ const WeatherApp = () => {
 
 
     return (
+        <div>
+            
+            <div className="main-container">
 
-        <div className="main-container">
-            <Header />
-            <div className="container">
+                <div className="container">
 
-                <div className="searchBar">
-                    <input type="text" className="cityInput search-inside" placeholder="Search" />
-                    <button className="search-button" onClick={search}>
-                        <img className="search-icon" src={search_icon} alt="Search" />
-                    </button>
+                    <div className="searchBar">
+                        <input type="text" className="cityInput search-inside" placeholder="Search" />
+                        <button className="search-button" onClick={search}>
+                            <img className="search-icon" src={search_icon} alt="Search" />
+                        </button>
+                    </div>
+
+                    <div className="card-container">
+                        {data && (
+                            <>
+                                <MainCard data={data} className="main-card" />
+                                <CardDetailComponent data={data} className="second-card" />
+                            </>
+                        )}
+                    </div>
+
                 </div>
 
-                <div className="card-container">
-                    {data && (
-                        <>
-                            <MainCard data={data} className="main-card" />
-                            <CardDetailComponent data={data} className="second-card" />
-                        </>
-                    )}
-                </div>
-       
-                </div>
-                <Footer />
             </div>
-            );
+           
+        </div>
+    );
 };
 
 
-            export default WeatherApp;
+export default WeatherApp;
 
