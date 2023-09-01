@@ -4,10 +4,10 @@ import { useState } from 'react';
 
 import search_button_icon from "../imgs/search_icon.png";
 
-export default function Search() {
+export default function Search({setApiData}) {
 
   // State
-  const [apiData, setApiData] = useState({});
+  //const [apiData, setApiData] = useState({});
   const [place, setPlace] = useState('');
 
   // API KEY AND URL
@@ -27,7 +27,7 @@ export default function Search() {
       });
   };
 
-  console.log(`api`, apiData);
+  //console.log(`api`, apiData);
 
 
   return (
