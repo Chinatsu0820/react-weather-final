@@ -16,7 +16,7 @@ import Footer from "../components/Footer";
 // import wind_icon from "../imgs/wind.jpg";
 // import humidity_icon from "../imgs/humidity.jpg";
 
-       
+
 const WeatherApp = () => {
 
     let api_key = "7a73f546e23472cce6023cba32b7b261";
@@ -59,8 +59,9 @@ const WeatherApp = () => {
 
 
     return (
-        <div>
-            <Header /> 
+
+        <div className="main-container">
+            <Header />
             <div className="container">
 
                 <div className="searchBar">
@@ -78,13 +79,13 @@ const WeatherApp = () => {
                         </>
                     )}
                 </div>
-
+       
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
-    );
+            );
 };
 
 
-export default WeatherApp;
+            export default WeatherApp;
 
