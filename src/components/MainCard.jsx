@@ -6,8 +6,17 @@ import drizzle_icon from "../imgs/drizzle.png";
 import rain_icon from "../imgs/rain.png";
 import snow_icon from "../imgs/snow.png";
 
-export default function MainCard({ data }) {
-    const weatherIconCode = data.weather[0].icon;
+export default function MainCard({ apiData }) {
+    // apiData.weatherが存在しない場合や要素が存在しない場合のデフォルト値を設定
+    // These are default if there is not apiData.weather and element
+    const weather = apiData.weather && apiData.weather[0];
+    const weatherIconCode = weather ? weather.icon : null;
+    
+    // apiDataまたはapiData.mainが存在しない場合、ローディング表示などの適切なコンテンツを返す
+    // We will get null if there is not apiData and apiData.main
+    if (!apiData || !apiData.main) {
+        return null; 
+    }
 
     let weatherImage;
 
@@ -34,10 +43,10 @@ export default function MainCard({ data }) {
                 <img src={weatherImage} alt="Weather Icon" className="w-48 h-48" />
             </div>
             <div className="temperature mt-4 text-white text-6xl font-semibold">
-                {Math.floor(data.main.temp)}°C
+                {Math.floor((apiData.main.temp)-273.15)}°C
             </div>
             <div className="font-normal text-center justify-center text-white capitalize">
-                <span className="text-xl font-light">{data.name}</span>
+                <span className="text-xl font-light">{apiData.name}</span>
             </div>
         </div>
 

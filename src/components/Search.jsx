@@ -31,28 +31,22 @@ export default function Search({setApiData}) {
 
 
   return (
-    <div>
-      {/* 
-      `max-w-xs` = max-width: 20rem(320px)
-      `h-12` = height: 3rem(48px)
-      `px-2.5 = padding-left,right: 0.625rem(10px)
+    <div className='flex justify-center mb-8'>
+      {/*
+      `px-5 = padding-left,right: 1.25rem(20px)
       `rounded-sm` = border-radius: 0.125rem(2px)
-      `bg-sky-800` = background-color: rgb(7 89 133)
-      `text-xl` = font-size: 1.25rem, line-height: 1.75rem
-      `mt-2.5` = margin-top: 0.625rem(10px)
+      `text-3xl` = font-size: 1.875rem, line-height: 2.25rem
       */}
-      <form className="relative max-w-xs" onSubmit={getDataApi}>
+      <form className="flex" onSubmit={getDataApi}>
         <input
-          className="absolute text-white h-12 py-0 px-2.5 left-0 -top-0 border-none rounded-sm bg-sky-800"
+          className="text-3xl text-white py-5 px-5 border-none rounded bg-gradient-to-r from-sky-500 to-indigo-500"
           type="text"
           placeholder="Type city name"
           onChange={(e) => setPlace(e.target.value)}
           value={place} />
-          <div className="text-center">
-        <button className="absolute h-8 border-none text-xl mt-2.5" type='submit'>
-          <img src={search_button_icon} alt="" />
+        <button className="float -ml-12" type='submit'>
+          <img className="h-7" src={search_button_icon} alt="" />
         </button>
-        </div>
       </form>
     </div>
   );
