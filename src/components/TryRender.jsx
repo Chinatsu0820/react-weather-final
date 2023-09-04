@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import "./WeatherApp.css";
+
 import Search from './Search';
 //import TestName from './TestName'; // just for test
 //import TestTemp from './TestTemp'; // just for test
 import MainCard from './MainCard';
 import CardDetailComponent from './CardDetailComponent';
-import "./WeatherApp.css";
+
+
 
 
 export default function App() {

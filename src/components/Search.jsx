@@ -31,7 +31,7 @@ export default function Search({setApiData}) {
 
 
   return (
-    <div className='flex justify-center mb-8'>
+    <div className='flex justify-center mb-8 w-full'>
       {/*
       `px-5 = padding-left,right: 1.25rem(20px)
       `rounded-sm` = border-radius: 0.125rem(2px)
