@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./WeatherApp.css";
 // import CardComponent from "./CardComponent.jsx";
-import CardDetailComponent from "./CardDetailComponent.jsx";
+import CardDetailComponent from "./CardDetail.jsx";
 import MainCard from "./MainCard.jsx";
 
 import search_icon from "../imgs/search.png";
@@ -10,8 +10,6 @@ import cloud_icon from "../imgs/cloud.png";
 import drizzle_icon from "../imgs/drizzle.png";
 import rain_icon from "../imgs/rain.png";
 import snow_icon from "../imgs/snow.png";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 // import wind_icon from "../imgs/wind.jpg";
 // import humidity_icon from "../imgs/humidity.jpg";
