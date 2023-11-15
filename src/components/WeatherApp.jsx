@@ -62,16 +62,15 @@ const WeatherApp = () => {
             <div className="main-container">
 
                 <div className="container">
-                    <h2>Weather App</h2>
 
                     <div className="searchBar">
-                        <input type="text" className="cityInput search-inside" placeholder="Search" />
+                        <input type="text" className="cityInput search-inside" placeholder="Input city name" />
                         <button className="search-button" onClick={search}>
                             <img className="search-icon" src={search_icon} alt="Search" />
                         </button>
                     </div>
 
-                    <div className="card-container">
+                    <div className="card-container-1">
                         {data && (
                             <>
                                 <MainCard data={data} className="main-card" />

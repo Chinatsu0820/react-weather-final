@@ -9,7 +9,7 @@
 .search-inside{
     width: 362px;
     height: 50px;
-    background: linear-gradient(0deg, #4062bd 0%, #060d93 100%);
+    background: linear-gradient(0deg, #4077bdc2 0%, #2240b5 100%);;
     border: none;
     outline: none;
     border-radius: 40px;
@@ -27,7 +27,7 @@
     width: 50px;
     height: 50px;
     border-radius: 40px;
-    background: linear-gradient(-20deg, #060d93 0%, #02096b 100%);
+    background: linear-gradient(-20deg, #4077bdc2 0%, #2240b5 100%);
 }
 
 .search-icon{
@@ -40,10 +40,10 @@
     gap: 20px;
 }
 
-.card-container {
+.card-container-1 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    flex-direction: row;
     gap: 20px;
 }
 
@@ -66,6 +66,15 @@
 
     .search-button{
         height: 40px;
+    }
+
+    .card-container{
+        width: 320px;
+        gap: 0px;
+        margin-bottom: 20px;
+    }
+    .mt-4 {
+        margin-top: 0;
     }
 
 }

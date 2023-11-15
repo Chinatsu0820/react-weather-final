@@ -1,0 +1,36 @@
+.lg\:py-56 {
+    padding-top: 10rem;
+    padding-bottom: 2rem;
+}
+
+body{
+    background-color: #0087ffd9;
+}
+
+.relative{
+    background-color: #0087ffd9;
+}
+.text-4xl{
+
+    color: #f6fbffd9;
+}
+
+.text-lg{
+    color: #d4dce3d4;
+}
+@media (min-width: 640px) {
+    .sm\:py-48 {
+      padding-top: 12rem;
+      padding-bottom: 2rem;
+    }
+}
+
+@media (max-width:450px){
+    .mt-6{
+        display: none;
+    }
+    .lg\:py-56{
+        padding-top: 30px;
+        padding-bottom: 0px;
+    }
+}
