@@ -3,6 +3,7 @@
     justify-content: center;
     gap: 1rem;
     margin-bottom: 2rem ;
+    align-items: center;
 }
 
 .search-inside{
@@ -50,6 +51,23 @@
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 20px;
+}
+
+@media (max-width:450px){
+
+    .card-detail-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+    .search-inside{
+        width: 100%;
+    }
+
+    .search-button{
+        height: 40px;
+    }
+
 }
 
 .main-card{
