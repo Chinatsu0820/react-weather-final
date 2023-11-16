@@ -32,15 +32,7 @@ export default function Search() {
 
   return (
     <div>
-      {/* 
-      `max-w-xs` = max-width: 20rem(320px)
-      `h-12` = height: 3rem(48px)
-      `px-2.5 = padding-left,right: 0.625rem(10px)
-      `rounded-sm` = border-radius: 0.125rem(2px)
-      `bg-sky-800` = background-color: rgb(7 89 133)
-      `text-xl` = font-size: 1.25rem, line-height: 1.75rem
-      `mt-2.5` = margin-top: 0.625rem(10px)
-      */}
+      
       <form className="relative max-w-xs" onSubmit={getDataApi}>
         <input
           className="absolute text-white h-12 py-0 px-2.5 left-0 -top-0 border-none rounded-sm bg-sky-800"

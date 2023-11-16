@@ -3,6 +3,11 @@
     padding-bottom: 2rem;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #ffffffc4; /* 2 */
+}
+
 body{
     background-color: #0087ffd9;
 }
@@ -29,8 +34,16 @@ body{
     .mt-6{
         display: none;
     }
+    .text-4xl{
+        font-size: 2em;
+    }
+
+    .home-title{
+        padding-top: 20px;
+    }
     .lg\:py-56{
-        padding-top: 30px;
+        padding-top: 0px;
         padding-bottom: 0px;
     }
+
 }
