@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./WeatherApp.css";
-// import CardComponent from "./CardComponent.jsx";
 import CardDetailComponent from "./CardDetail.jsx";
 import MainCard from "./MainCard.jsx";
-
 import search_icon from "../imgs/search.png";
 import clear_icon from "../imgs/clear.png";
 import cloud_icon from "../imgs/cloud.png";
 import drizzle_icon from "../imgs/drizzle.png";
 import rain_icon from "../imgs/rain.png";
 import snow_icon from "../imgs/snow.png";
-
-// import wind_icon from "../imgs/wind.jpg";
-// import humidity_icon from "../imgs/humidity.jpg";
 
 
 const WeatherApp = () => {
@@ -22,10 +17,12 @@ const WeatherApp = () => {
     const [data, setData] = useState(null);
     const [wicon, setWicon] = useState(cloud_icon);
 
+    // ユーザーが入力した都市名を使用してOpenWeatherMap APIから天気情報を取得し、取得したデータに基づいて表示するアイコンを設定する
     const search = async () => {
         const element = document.getElementsByClassName("cityInput");
 
         if (element[0].value === "") {
+            alert("Please enter the city name");
             return;
         }
 
@@ -34,6 +31,12 @@ const WeatherApp = () => {
         let response = await fetch(url);
         let newData = await response.json();
         setData(newData);
+
+        if(!response.ok) {
+            alert("City not found. Please enter a valid city name.");
+            element[0].value = "";
+            return;
+        }
 
         if (newData.weather[0].icon === "01d" || newData.weather[0].icon === "01n") {
             setWicon(clear_icon);
@@ -51,9 +54,8 @@ const WeatherApp = () => {
             setWicon(snow_icon);
         } else {
             setWicon(clear_icon);
-        }
-    };
-
+        } 
+    } 
 
 
     return (
