@@ -9,70 +9,61 @@ import drizzle_icon from "../imgs/drizzle.png";
 import rain_icon from "../imgs/rain.png";
 import snow_icon from "../imgs/snow.png";
 
-
+// WeatherAppのための関数コンポーネント
 const WeatherApp = () => {
-
+    // OpenWeatherMap APIキー
     let api_key = "7a73f546e23472cce6023cba32b7b261";
 
+    // 天気データと選択された天気アイコンを保存するState
     const [data, setData] = useState(null);
-    const [wicon, setWicon] = useState(cloud_icon);
+    
 
-    // ユーザーが入力した都市名を使用してOpenWeatherMap APIから天気情報を取得し、取得したデータに基づいて表示するアイコンを設定する
+    // ユーザーの入力を処理し、天気データを取得する関数
     const search = async () => {
+        // 入力エレメントを取得
         const element = document.getElementsByClassName("cityInput");
 
+        // 入力が空かどうかを確認
         if (element[0].value === "") {
-            alert("Please enter the city name");
+            alert("Please enter a city name");
+            element[0].value = "";
             return;
         }
 
+        // ユーザーの入力を使用してAPI URLを構築
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${element[0].value}&units=Metric&appid=${api_key}`;
 
+        // APIから天気データを取得
         let response = await fetch(url);
         let newData = await response.json();
         setData(newData);
 
-        if(!response.ok) {
+        // APIレスポンスでエラーが発生したか確認
+        if (!response.ok) {
             alert("City not found. Please enter a valid city name.");
             element[0].value = "";
             return;
         }
 
-        if (newData.weather[0].icon === "01d" || newData.weather[0].icon === "01n") {
-            setWicon(clear_icon);
-        } else if (newData.weather[0].icon === "02d" || newData.weather[0].icon === "02n") {
-            setWicon(cloud_icon);
-        } else if (newData.weather[0].icon === "03d" || newData.weather[0].icon === "03n") {
-            setWicon(drizzle_icon);
-        } else if (newData.weather[0].icon === "04d" || newData.weather[0].icon === "04n") {
-            setWicon(drizzle_icon);
-        } else if (newData.weather[0].icon === "09d" || newData.weather[0].icon === "09n") {
-            setWicon(rain_icon);
-        } else if (newData.weather[0].icon === "010d" || newData.weather[0].icon === "010n") {
-            setWicon(rain_icon);
-        } else if (newData.weather[0].icon === "013d" || newData.weather[0].icon === "013n") {
-            setWicon(snow_icon);
-        } else {
-            setWicon(clear_icon);
-        } 
-    } 
+        
+    };
 
-
+    // WeatherAppコンポーネントのJSX構造
     return (
         <div>
-            
             <div className="main-container">
-
                 <div className="container">
-
                     <div className="searchBar">
-                        <input type="text" className="cityInput search-inside" placeholder="Input city name" />
+                        {/* 都市名のための入力フィールド */}
+                        <input type="text" className="cityInput search-inside" placeholder="enter a city name" />
+                        {/* 検索関数をトリガーするボタン */}
                         <button className="search-button" onClick={search}>
-                            <img className="search-icon" src={search_icon} alt="Search" />
+                            <img className="search-icon" src={search_icon} alt="search" />
                         </button>
                     </div>
 
                     <div className="card-container-1">
+                        {/* データが利用可能な場合、MainCardとCardDetailComponentを表示 */}
                         {data && (
                             <>
                                 <MainCard data={data} className="main-card" />
@@ -80,15 +71,11 @@ const WeatherApp = () => {
                             </>
                         )}
                     </div>
-
                 </div>
-
             </div>
-           
         </div>
     );
 };
 
-
+// WeatherAppコンポーネントをデフォルトエクスポート
 export default WeatherApp;
-
